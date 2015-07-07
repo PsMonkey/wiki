@@ -11,7 +11,7 @@ transform matrix
 
 		| Sx    0   0 |
 		|  0   Sy   0 |
-		|  0    0   0 |
+		|  0    0   1 |
 
 * Rotate：`a` 為旋轉弳度
 
