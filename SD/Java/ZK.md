@@ -121,6 +121,11 @@ Listbox
 `onAfterRender` 的時候，資料已經 ready 了（先不考慮動態載入資料的問題 Zzzz），
 所以 `selectAll()` 可以運作。
 
+在 EE 版，一個有設定 `rod=true` 的 Listbox 是不會出現 select all 的 checkbox。
+如果不是在 EE 版，設定 `rod=true`（無論在 zk.xml 還是 ZUL）都會被忽略掉，
+所以一定會出現 select all 的 checkbox。
+
+
 
 Borderlayout
 ------------
