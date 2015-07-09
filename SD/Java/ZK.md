@@ -103,6 +103,22 @@ Form Binding
 Component
 =========
 
+Cell
+----
+用了 Cell 會讓 DOM 結構與原本（不用 Cell）的 DOM 結構不一樣 [ref][Cell]。
+這就會導致 Grid 原本賦予的 style 掛不上去。
+解決方法大概有這幾種：
+
+1. 每個 Row 裡頭 component 統一都用 Cell 包起來。
+1. 寫一個 global 的 CSS 對應
+1. 不管什麼 deprecated，繼續用 Row.setSpans()
+
+結果似乎最保險的是最後那個不管 deprecated... 真是幹他媽的好 ZK 阿...
+
+
+[Cell]: http://books.zkoss.org/wiki/ZK%20Component%20Reference/Supplementary/Cell
+
+
 Listbox
 -------
 
