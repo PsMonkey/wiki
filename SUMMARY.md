@@ -6,5 +6,9 @@
 		* [JAXB](SD/Java/JAXB.md)
 		* [ZK](SD/Java/ZK.md)
 	* [圖學](SD/graphics.md)
+* 雜七雜八
+	* [GitBook](misc/GitBook.md)
+	* [Jeff 大師語錄](misc/Jeff.md)
+	* [Markdown](misc/markdown.md)
 * Portfolio
 	* [軍旅生涯](portfolio/military.md)
