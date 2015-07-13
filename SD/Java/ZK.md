@@ -1,3 +1,6 @@
+還有一些詰譙成份居多的散記在 [blameZK](https://plus.google.com/collection/wmvsb) 上。
+
+
 Eclipse
 =======
 
@@ -41,6 +44,9 @@ wire 相關
 ---------
 
 使用 `@Wire`、`@WireVariable` 必須在 `@Init` 的 method 以後才會有實際值。
+
+**注意**：`Window` 是獨立的 IdSpace，也就是你無法直接 wire `Window` 裡頭的 component，
+而必須從 `Window` 開始指進去，例如 `@Wire("#fooWindow #foo")`
 
 
 觸發 NotifyChange 的其他方法
@@ -103,6 +109,14 @@ Form Binding
 Component
 =========
 
+Borderlayout
+------------
+
+margins 的順序居然是「上、左、右、下」
+
+`setCollapsible()` 的前提條件是 `getTitle` 必須有值。
+
+
 Cell
 ----
 用了 Cell 會讓 DOM 結構與原本（不用 Cell）的 DOM 結構不一樣 [ref][Cell]。
@@ -140,15 +154,6 @@ Listbox
 在 EE 版，一個有設定 `rod=true` 的 Listbox 是不會出現 select all 的 checkbox。
 如果不是在 EE 版，設定 `rod=true`（無論在 zk.xml 還是 ZUL）都會被忽略掉，
 所以一定會出現 select all 的 checkbox。
-
-
-
-Borderlayout
-------------
-
-margins 的順序居然是「上、左、右、下」
-
-`setCollapsible()` 的前提條件是 `getTitle` 必須有值。
 
 
 Textbox
