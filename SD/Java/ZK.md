@@ -106,6 +106,16 @@ Form Binding
 那麼，在 child component 裡頭的 `@command('wtf')` 只會觸發 `ChildVM.wtf()`，不會連帶觸發 `ParentVM.wtf()`
 
 
+Layout 之謎
+===========
+
+在 `listbox` 的 `auxhead` 中，各個 component 要（視覺上合理地）撐滿，
+學理上給 `width="100%"` 或是 `hflex="1"`，當然以 render 速度來說應該設 width 會比較快，不過：
+
+* textbox：只能用 `hflex="1"`
+* combobox：都可以
+
+
 Component
 =========
 
