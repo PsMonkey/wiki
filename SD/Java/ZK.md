@@ -170,3 +170,13 @@ Textbox
 -------
 
 ZUL 的 `onOK` 是按下 enter 時候會做的事情。
+
+如果設定 `rows/cols`，那麼就會無視 `width/height/hflex/vflex` 的設定，
+Textbox 的大小會直接以 `rows/cols` 為準。
+所以如果希望 Textbox 是 liquid（大小隨 parent 的大小而變動）
+就是設定 `multiline="true"`，然後不要給 `rows/cols`。
+
+Textbox 很容易被 parent 截掉、但是視覺上看不出來（例如在 Grid 當中）。
+只能說當 Textbox 是多行狀態（等同於 HTML 的 textarea），
+在 Chrome / Firefox 當中，右下角都會出現可以調整大小的 button，
+以此作為判斷依據，也可以避免發生「怎麼都沒有 scroll bar」的誤判狀況 Orz。
