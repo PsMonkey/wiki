@@ -1,6 +1,11 @@
 還有一些詰譙成份居多的散記在 [blameZK](https://plus.google.com/collection/wmvsb) 上。
 
 
+ZUL Coding Style
+================
+* 使用 `<?import wtf.foo>` 而不是在 `<zscript>` 中寫 `import wtf.foo;`。
+
+
 Eclipse
 =======
 
