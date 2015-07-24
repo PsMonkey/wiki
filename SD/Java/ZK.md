@@ -110,6 +110,9 @@ Form Binding
 而 `ParentVM` 跟 `ChildVM` 都有掛 `@Command` 的 method 假設叫做 `wtf()`。
 那麼，在 child component 裡頭的 `@command('wtf')` 只會觸發 `ChildVM.wtf()`，不會連帶觸發 `ParentVM.wtf()`
 
+`@load()` 可以用來呼叫 VM 的 method，
+例如 `@load(vm.foo(each))` 就是呼叫 `foo()`，然後傳入 `each`。
+
 
 Layout 之謎
 ===========
@@ -171,6 +174,25 @@ Listbox
 所以一定會出現 select all 的 checkbox。
 
 
+### nonselectableTags ###
+
+Listbox 中的某些 **HTML tag** 的 `onClick` 行為，天生就不會連帶觸發 Listbox 的 `onSelect` 行為，
+例如 `<button>`、`<input>`、`<textarea>`、`<a>`。
+然後透過 `nonselectableTags` 這個 attribute，可以重新決定哪些 **HTML tag** 會 / 不會觸發 `onSelect`。
+例如希望圖片跟按鈕都不要觸發 `onSelect`，就要這樣寫
+
+	<listbox nonselectableTags="img, button">
+		<!-- 略 -->
+	</listbox>
+	
+
+`nonselectableTags` 也可以給 `*`，表示不管阿貓阿狗都不會觸發 `onSelect`。
+然後建議搭配 `checkmark="true"`
+
+最後，請注意，`nonselectableTags` 接受的值是**幹他媽的 HTML tag**，
+不是 ZUL component 名稱，也就是說，你得知道哪些 component 實際上是由什麼 HTML 湊出來的。
+
+
 Textbox
 -------
 
@@ -185,3 +207,8 @@ Textbox 很容易被 parent 截掉、但是視覺上看不出來（例如在 Gri
 只能說當 Textbox 是多行狀態（等同於 HTML 的 textarea），
 在 Chrome / Firefox 當中，右下角都會出現可以調整大小的 button，
 以此作為判斷依據，也可以避免發生「怎麼都沒有 scroll bar」的誤判狀況 Orz。
+
+
+Window
+------
+要有設定 `title` 的情況下 `closable="true"` 才會有效果... ＝＝"
