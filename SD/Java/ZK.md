@@ -104,6 +104,27 @@ Form Binding
 必須自己作 `form.setField("foo", aFoo)`。
 
 
+### 動態改變 middle object 的 class ###
+
+如果 middle object 的 class 會在操作當中改變
+（你問為什麼會有這種需求？這是一個很長的故事... [淚目]），
+這時會炸出一個 exception，炸點在 ZUL 宣告 form binding 的附近，
+內容主要是 property binding 錯誤。
+目前找到唯一的解法，就是自己實作一個 `MyForm`，內容完全照抄 `org.zkoss.bind.impl.FormImpl`，然後加上：
+
+	public void clear() {
+		_saveFieldNames.clear();
+		_loadFieldNames.clear();
+		_fields.clear();
+		_initFields.clear();
+		_dirtyFieldNames.clear();
+	}
+
+
+這樣在切換時先呼叫 `clear()` 再 notify change binding 的 instance，
+就不會炸了 \囧/
+	
+
 雜項
 ----
 如果 bind `ParentVM` 的 component 裡頭有一個 child component 是 bind `ChildVM`，
@@ -112,6 +133,18 @@ Form Binding
 
 `@load()` 可以用來呼叫 VM 的 method，
 例如 `@load(vm.foo(each))` 就是呼叫 `foo()`，然後傳入 `each`。
+
+這樣子作可以取得發出 event 的 component
+
+	@Command
+	public void wtf(@ContextParam(ContextType.COMPONENT) Component component) { }
+
+這樣子作可以取得發出 event 的 event
+
+	@Command
+	public void wtf(@ContextParam(ContextType.TRIGGER_EVENT) Event event) { }
+	
+當然，可以指定 child class、也可以兩個同時一起用。
 
 
 Layout 之謎
