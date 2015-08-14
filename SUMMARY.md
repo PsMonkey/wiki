@@ -2,11 +2,11 @@
 * 軟體開發
 	* Java
 		* [Hibernate](SD/Java/Hibernate.md)
-		* [JasperReport](SD/JasperReport.md)
+		* [JasperReport](SD/Java/JasperReport.md)
 		* [Java Web Start](SD/Java/JavaWebStart.md)
 		* [JAXB](SD/Java/JAXB.md)
 		* [ZK](SD/Java/ZK.md)
-	* [Browser](SD/browser)
+	* [Browser](SD/browser.md)
 	* [圖學](SD/graphics.md)
 * 雜七雜八
 	* [GitBook](misc/GitBook.md)
