@@ -184,6 +184,12 @@ Cell
 [Cell]: http://books.zkoss.org/wiki/ZK%20Component%20Reference/Supplementary/Cell
 
 
+Combobox
+--------
+`Combobox.setValue()` 是對應選到的 `Comboitem.getLabel()`，
+`Comboitem` 的 `value` 目前看起來無意義。
+
+
 Listbox
 -------
 
@@ -224,6 +230,13 @@ Listbox 中的某些 **HTML tag** 的 `onClick` 行為，天生就不會連帶�
 
 最後，請注意，`nonselectableTags` 接受的值是**幹他媽的 HTML tag**，
 不是 ZUL component 名稱，也就是說，你得知道哪些 component 實際上是由什麼 HTML 湊出來的。
+
+
+Macro
+-----
+`macro` 似乎會預設兩個 style、其中一個是 `display:inline-block`。
+如果對 macro 作 `setVisible(false)` 之後再 `setVisible(true)`，
+這個 macro 的 style 就會被清光光...... WTF
 
 
 Textbox
