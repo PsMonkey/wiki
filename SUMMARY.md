@@ -1,6 +1,6 @@
 * [痞子軍團本部](README.md)
 * 軟體開發
-	* Java
+	* [Java](SD/Java/README.md)
 		* [Hibernate](SD/Java/Hibernate.md)
 		* [JasperReport](SD/Java/JasperReport.md)
 		* [Java Web Start](SD/Java/JavaWebStart.md)
