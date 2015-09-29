@@ -15,4 +15,5 @@
 	* [Jeff 大師語錄](misc/Jeff.md)
 	* [Markdown](misc/markdown.md)
 * Portfolio
+	* [飛行紀錄](portfolio/flight.md)
 	* [軍旅生涯](portfolio/military.md)
