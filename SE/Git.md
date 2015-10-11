@@ -1,3 +1,17 @@
+基本概念
+========
+
+如果用 `git mv` 移動一個檔案，`git status` 的結果會是
+
+	renamed:	wtf.md -> foo/wtf.md
+	
+建議這時候就作 commit 動作（也符合「小步前進」原則），
+因為如果沒 commit 就改變內容，則 `git status` 會認為是：
+
+	deleted:	wtf.md
+	new file:	foo/wtf.md
+
+
 設定
 ====
 
@@ -17,6 +31,18 @@ branch 相關
 開啟一個完全沒有 parent 的 branch（在這裡是 `gh-pages`）
 
 	git checkout --orphan gh-pages
+
+刪除 branch
+
+	git branch -d wtfBranch
+	
+強制刪除 branch（沒有 merge 的話就需要）
+
+	git branch -D wtfBranch
+	
+刪除 remote 上的 branch
+
+	git push fooRemote :wtfBranch
 
 
 pull / push
