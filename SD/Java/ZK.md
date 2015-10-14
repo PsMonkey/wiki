@@ -190,6 +190,11 @@ Combobox
 `Comboitem` 的 `value` 目前看起來無意義。
 
 
+Datebox
+-------
+如果只是要借用 Datebox 顯示、而不讓使用者修改值，那除了 `setReadonly(true)` 之外還要加上 `setButtonVisible(false)`。
+
+
 Listbox
 -------
 
@@ -253,6 +258,28 @@ Textbox 很容易被 parent 截掉、但是視覺上看不出來（例如在 Gri
 只能說當 Textbox 是多行狀態（等同於 HTML 的 textarea），
 在 Chrome / Firefox 當中，右下角都會出現可以調整大小的 button，
 以此作為判斷依據，也可以避免發生「怎麼都沒有 scroll bar」的誤判狀況 Orz。
+
+
+Tree
+----
+
+如果要知道一個 multiple 的 Tree
+（不是 multiple 的沒有這個問題，用 getSelection() 就好）
+剛剛點選 / 取消點選哪個 node，
+無法直接從 API 取得，必須要：
+
+1. ZUL 的 `treeitem` 這樣寫
+
+		<treeitem value="@load(each)">
+		
+1. `tree` 的 `onSelect` 在 VM 是：
+
+		public void treeSelect(@ContextParam(ContextType.TRIGGER_EVENT) SelectEvent<Treeitem, Foo> se) {
+			@SuppressWarnings("unchecked")
+			TreeNode<Foo> node = (TreeNode<Foo>)se.getReference().getValue();
+		}
+		
+ZK 7.0 似乎有新增相關的 API：`getPreviousSelectedObject()`，還未測。
 
 
 Window
