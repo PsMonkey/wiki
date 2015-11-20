@@ -13,7 +13,8 @@
 1. General：勾選 Show heap status
 	* Colors and Fonts
 		* Basic / Text Font：改成 [Monaco](Eclipse/MONACO.TTF)
-	* Editors / Text Editors / Speeling：關掉
+	* Editors / Text Editors：勾選 Show whitespace characters（visibility 細節略）
+		* Speeling：關掉
 	* Startup and Shutdown
 		* 勾選 Refresh workspace on startup
 		* 取消 Confirm exit when closing last window
@@ -35,3 +36,9 @@
 	* CSS Files：Encoding UTF-8
 	* HTML Files：Encoding UTF-8
 	* JSP Files：Encoding UTF-8
+
+
+安裝 GPE
+--------
+
+不裝 AppEngine、Android 相關
