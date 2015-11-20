@@ -9,6 +9,7 @@
 	* [Browser](SD/browser.md)
 	* [圖學](SD/graphics.md)
 * 軟體工程
+	* [Eclipse](SE/Eclipse.md)
 	* [Git](SE/Git.md)
 * 雜七雜八
 	* [GitBook](misc/GitBook.md)
