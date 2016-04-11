@@ -24,6 +24,11 @@
 	* Workspace
 		* Text file encoding：Other / UTF-8
 1. Java
+	* Compiler
+		* Task Tags，增加：
+			* Delete / Low
+			* I18N / Low
+			* Refactory / Normal
 	* Editor
 		* Folding：勾選 Inner types
 		* Save Actions
