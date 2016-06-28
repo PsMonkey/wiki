@@ -50,3 +50,17 @@ pull / push
 
 	git push --all origin
 	
+
+
+版本推進流程
+============
+
+1. 版號拿掉 `SNAPSHOT`，commit
+1. 掛上版號 tag
+
+		git tag wtf.foo.bar
+
+1. 版號進版，加上 `SNAPSHOT`，commit
+1. 推上 remote repo（所有 tag 都上）
+
+		git push origin --tags
