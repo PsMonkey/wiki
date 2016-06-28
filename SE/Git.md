@@ -14,6 +14,7 @@ Eclipse（至少在 Mars）用 Refactor / Rename 修改 Java class，
 
 	git config --global core.editor "'C:\Program Files (x86)\Notepad++\notepad++.exe' -multiInst -nosession -noPlugin"
 
+
 設定 username 跟 email
 
 	git config user.name Foo
@@ -27,14 +28,17 @@ branch 相關
 
 	git checkout --orphan gh-pages
 
+
 刪除 branch
 
 	git branch -d wtfBranch
-	
+
+
 強制刪除 branch（沒有 merge 的話就需要）
 
 	git branch -D wtfBranch
-	
+
+
 刪除 remote 上的 branch
 
 	git push fooRemote :wtfBranch
@@ -42,14 +46,16 @@ branch 相關
 
 pull / push
 ===========
+
 `pull` 時不想產生一個 merge commit（也有[寫入設定檔的招式](http://ihower.tw/blog/archives/3843)）
 
+	git pull -r
 	git pull --rebase
-		
+
+
 所有 branch 都 push 上 remote
 
 	git push --all origin
-	
 
 
 版本推進流程
