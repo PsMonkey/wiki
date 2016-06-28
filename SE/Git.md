@@ -1,15 +1,10 @@
 基本概念
 ========
 
-如果用 `git mv` 移動一個檔案，`git status` 的結果會是
+移動、改名要用 `git mv`，不然會被 git 認為是「刪除一個檔案 + 新增一個檔案」。
 
-	renamed:	wtf.md -> foo/wtf.md
-	
-建議這時候就作 commit 動作（也符合「小步前進」原則），
-因為如果沒 commit 就改變內容，則 `git status` 會認為是：
-
-	deleted:	wtf.md
-	new file:	foo/wtf.md
+Eclipse（至少在 Mars）用 Refactor / Rename 修改 Java class，
+會用 `git mv` 做，可以安心直接使用。
 
 
 設定
