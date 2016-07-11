@@ -42,6 +42,7 @@ branch 相關
 刪除 remote 上的 branch
 
 	git push fooRemote :wtfBranch
+	git push fooRemote --delete wtfBranch
 
 
 pull / push
