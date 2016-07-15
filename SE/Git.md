@@ -62,12 +62,36 @@ pull / push
 版本推進流程
 ============
 
-1. 版號拿掉 `SNAPSHOT`，commit
+1. pom 檔版號拿掉 `SNAPSHOT`、寫 `Release.md`，commit
 1. 掛上版號 tag
 
 		git tag wtf.foo.bar
 
-1. 版號進版，加上 `SNAPSHOT`，commit
+1. pom 檔版號進版，加上 `SNAPSHOT`，commit
 1. 推上 remote repo（所有 tag 都上）
 
 		git push origin --tags
+
+
+SVN repo 匯入
+=============
+
+1. 用 git svn 取出 repo
+
+		git svn clone SVN_URL REPO_NAME
+		
+1. 用 git log 找出系統產生的 commiter email
+	（假設為 `foo <foo@26f1cbcb-2ce9-9940-8e71-79534620cc70>`）
+1. 用 git filter-branch 修正
+
+		git filter-branch --commit-filter '
+			if [ "$GIT_AUTHOR_EMAIL" = "foo@26f1cbcb-2ce9-9940-8e71-79534620cc70" ];
+			then
+				GIT_AUTHOR_NAME="FOO";
+				GIT_AUTHOR_EMAIL="foo@DontCareAbout.us";
+				git commit-tree "$@";
+			else
+				git commit-tree "$@";
+			fi' HEAD
+1. 因為不知道怎麼改上面那段程式碼，所以只好有幾個 author 就做幾次 [死]
+1. 確定改完後作 git push
