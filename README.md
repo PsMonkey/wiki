@@ -6,7 +6,7 @@ Blog 們
 * [PT2Club Blog]：對於軟體業界的隨便亂寫
 
 
-[痞子軍團本部]: http://www.psmonkey.org
+[痞子軍團本部]: http://blog.psmonkey.org
 [Don'tCare Blog]: http://blog.dontcareabout.us
 [PT2Club Blog]: http://pt2club.blogspot.com
 
