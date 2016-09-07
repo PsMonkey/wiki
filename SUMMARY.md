@@ -9,8 +9,7 @@
 		* [ZK](SD/Java/ZK.md)
 	* [Browser](SD/browser.md)
 	* [圖學](SD/graphics.md)
-	* 過去的惡夢
-		* [PHP](SD/nightmare/PHP.md)
+	* [PHP](SD/PHP.md)
 * 軟體工程
 	* [Eclipse](SE/Eclipse.md)
 	* [Git](SE/Git.md)
