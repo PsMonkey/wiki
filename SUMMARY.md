@@ -7,6 +7,8 @@
 		* [JAXB](SD/Java/JAXB.md)
 		* [JVM](SD/Java/JVM.md)
 		* [ZK](SD/Java/ZK.md)
+	* JS
+		* [pixi.js](SD/JS/pixi.md)
 	* [Browser](SD/browser.md)
 	* [圖學](SD/graphics.md)
 	* [PHP](SD/PHP.md)
