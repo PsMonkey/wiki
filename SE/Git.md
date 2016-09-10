@@ -43,6 +43,11 @@ branch 相關
 
 	git push fooRemote :wtfBranch
 	git push fooRemote --delete wtfBranch
+	
+
+抓 remote 的某個 branch 變成 local 的 branch
+
+	git fetch fooRemote remoteBranch:localBranch
 
 
 pull / push
