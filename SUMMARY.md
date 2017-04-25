@@ -15,6 +15,7 @@
 * 軟體工程
 	* [Eclipse](SE/Eclipse.md)
 	* [Git](SE/Git.md)
+	* [GitHub](SE/GitHub.md)
 * 雜七雜八
 	* [GitBook](misc/GitBook.md)
 	* [Jeff 大師語錄](misc/Jeff.md)
