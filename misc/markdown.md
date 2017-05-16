@@ -4,8 +4,8 @@ Coding Style
 
 1. 縮排用 tab
 1. header
-    1. h1, h2 用 Setext-stye（`====` 與 `----`），要跟 header 一樣長，但不得少於四個。
-    1. 除了文件第一行之外，其餘 header 的上頭都要空兩行
+	1. h1, h2 用 Setext-stye（`====` 與 `----`），要跟 header 一樣長，但不得少於四個。
+	1. 除了文件第一行之外，其餘 header 的上頭都要空兩行
 		1. 例外：如果連續兩個 header，則 header 之間只要空一行
 		1. 例外：作為 blockquote 的 title
 	1. header 下頭要空一行
@@ -13,8 +13,8 @@ Coding Style
 1. code block
 	1. 上頭空一行、下頭空兩行
 1. blockquote
-    1. 上頭空一行、下頭空兩行
-    1. 行首全部都要加上 `>`
+	1. 上頭空一行、下頭空兩行
+	1. 行首全部都要加上 `>`
 	1. 用 blockquote 作諸如「備註」、「注意」的文字區塊，
 		則用第六級的 header（稱之為 title），例如：
 		
@@ -32,10 +32,6 @@ Coding Style
 	1. *建議*使用 reference 方式
 	1. reference link 段落上下都要空兩行
 1. phrase emphasis 用 `*` 跟 `**` 而不用 `_` 跟 `__`
-1. 若要使用延伸語法，以 [Github] 為基準。
-
-
-[Github]: (https://help.github.com/articles/github-flavored-markdown/)
 
 
 雜項 memo
@@ -50,3 +46,38 @@ Coding Style
 	目前發現只有在之間插一個無意義的 reference link 才能分開：
 
         [MEANINGLESS]: http://
+		
+
+GitHub (GFM)
+============
+
+GitHub 發展出來的[自有規格][GFM]，基本上跟傳統版 markdown 相容，
+但是多了：
+
+* Table
+* Task list
+* 刪除線
+* 自動轉 hyperlink
+* 禁止原生 HTML 碼
+
+
+[GFM]: https://github.github.com/gfm/
+
+
+裏技？
+------
+
+如果在文件的最開頭這樣寫：
+
+	---
+	header: context
+	標題: 內文
+	---
+
+
+會製造出一個 table：
+
+
+| header  | 標題 |
+| ------- | ---- |
+| context | 內文 |
