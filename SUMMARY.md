@@ -22,5 +22,6 @@
 	* [Markdown](misc/markdown.md)
 * Portfolio
 	* [飛行紀錄](portfolio/flight.md)
+	* [桌遊紀錄](portfolio/boardGame.md)
 	* [島呼冊店](portfolio/tofuBooks.md)
 	* [軍旅生涯](portfolio/military.md)
