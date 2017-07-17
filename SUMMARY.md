@@ -23,5 +23,10 @@
 * Portfolio
 	* [飛行紀錄](portfolio/flight.md)
 	* [桌遊紀錄](portfolio/boardGame.md)
+		* [極品區](portfolio/boardGame/level-1.md)
+		* [優質區](portfolio/boardGame/level-2.md)
+		* [正常區](portfolio/boardGame/level-3.md)
+		* [雞肋區](portfolio/boardGame/level-4.md)
+		* [死亡區](portfolio/boardGame/level-5.md)
 	* [島呼冊店](portfolio/tofuBooks.md)
 	* [軍旅生涯](portfolio/military.md)
