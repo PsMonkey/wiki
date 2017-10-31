@@ -20,6 +20,7 @@
 	* [GitBook](misc/GitBook.md)
 	* [Jeff 大師語錄](misc/Jeff.md)
 	* [Markdown](misc/markdown.md)
+	* [3C 產品秘技](misc/3C.md)
 * Portfolio
 	* [飛行紀錄](portfolio/flight.md)
 	* [桌遊紀錄](portfolio/boardGame.md)
