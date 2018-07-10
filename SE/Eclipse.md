@@ -29,6 +29,7 @@
 			* Delete / Low
 			* I18N / Low
 			* Refactory / Normal
+			* WA / Low （workaround 的縮寫）
 	* Editor
 		* Folding：勾選 Inner types
 		* Save Actions
