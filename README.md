@@ -19,15 +19,15 @@ Blog 們
 [PT2Club Blog]: http://pt2club.blogspot.com
 
 
-Google+ 們
-==========
+Social Media
+============
 
-* [+PT2Club]：主力碎念區，不過通常都是跟軟體開發有關
-* [+PsMonkey]：我也不知道會在這裡碎念什麼 [毆殺]
+* Instagram：[@ps_monkey]
+* Twitter：[@PsMonkey9487]
 
 
-[+PT2Club]: https://plus.google.com/u/0/117968090982719732361/about
-[+PsMonkey]: https://plus.google.com/u/0/113687460021382076877/about
+[@ps_monkey]: https://www.instagram.com/ps_monkey/
+[@PsMonkey9487]: https://twitter.com/PsMonkey9487
 
 
 其他 Gitbook
