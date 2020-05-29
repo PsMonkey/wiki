@@ -10,7 +10,8 @@ Eclipse（至少在 Mars）用 Refactor / Rename 修改 Java class，
 設定
 ====
 
-設定 Notepad++ 為 commit editor（@Windows）
+Windows 上設定 Notepad++ 為 commit editor
+（在 2.26.x 安裝時可以設定連結的 editor，不用再自己搞了），
 
 	git config --global core.editor "'C:\Program Files (x86)\Notepad++\notepad++.exe' -multiInst -nosession -noPlugin"
 
@@ -19,6 +20,11 @@ Eclipse（至少在 Mars）用 Refactor / Rename 修改 Java class，
 
 	git config user.name Foo
 	git config user.email foo@wtf.org
+
+
+gitk 使用 UTF-8 編碼（在 2.26.x 被炸到）
+
+	git config --global gui.encoding UTF-8
 
 
 branch 相關
