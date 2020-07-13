@@ -23,11 +23,9 @@ Social Media
 ============
 
 * Instagram：[@ps_monkey]
-* Twitter：[@PsMonkey9487]
 
 
 [@ps_monkey]: https://www.instagram.com/ps_monkey/
-[@PsMonkey9487]: https://twitter.com/PsMonkey9487
 
 
 其他 Gitbook
