@@ -1,3 +1,27 @@
+以程式初始化
+------------
+
+版本：5+
+
+```Java
+StandardServiceRegistry registry = new StandardServiceRegistryBuilder()
+	.configure()	//非必須，有掛的話在 classpath 當中就得要有 hibernate.cfg.xml
+	.applySetting(AvailableSettings.DRIVER, "org.h2.Driver")
+	//apply... apply... apply...
+	.build()
+;
+	
+MetadataSources sources = new MetadataSources(registry)
+	.addAnnotatedClass(Foo.class)	//等同 cfg.xml <mapping class="PACKAGE.Foo" />
+	//目前看不出 Hibernate 有提供「載入指定 package 下所有 class」的方式... ＝＝"
+;
+
+SessionFactory sessionFactory  = sources.getMetadataBuilder().build()
+	.getSessionFactoryBuilder().build();
+```
+
+
+----------------------------------------------------------------------
 Entity 的哏
 -----------
 
