@@ -19,9 +19,10 @@
 	* [GitHub](SE/GitHub.md)
 	+ [Scrum](SE/Scrum.md)
 * 雜七雜八
+	+ [Markdown](misc/markdown.md)
+	+ [Mermaid.js](misc/Mermaid-JS.md)
 	* [GitBook](misc/GitBook.md)
 	* [Jeff 大師語錄](misc/Jeff.md)
-	* [Markdown](misc/markdown.md)
 	* [3C 產品秘技](misc/3C.md)
 * Portfolio
 	* [飛行紀錄](portfolio/flight.md)
