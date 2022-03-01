@@ -15,7 +15,7 @@ class 定義
 
 ```
 class C_NAME ~G_TYPE~ {
-    <<M_TEXT>>
+    <<S_TEXT>>
 	F_TYPE F_NAME
 	M_NAME(M_ARGS) R_TYPE
 }
@@ -27,7 +27,8 @@ class C_NAME ~G_TYPE~ {
 	+ 多個 type 用 `,` 分隔（單純的字串處理）
 	+ 不支援 nested type（generic type 裡頭還有 generic type）
 	+ **會** 忽略跟 `C_NAME` 之間的空格
-+ `M_TEXT`：class 的 metadata（官方用「annotation」），前後用 `<<` / `>>` 夾起
++ `S_TEXT`：class 的 stereotype（官方用「annotation」），
+	前後用 `<<` / `>>` 夾起，單純的字串處理
 	+ 可以寫多個，但是只有第一個會顯示
 	+ 可以不用寫在 class 定義的第一行
 + `F_NAME` / `M_NAME()`：field / method 的名稱
@@ -39,15 +40,16 @@ class C_NAME ~G_TYPE~ {
 		單純的字串處理。
 	+ `R_TYPE` 可不寫
 	+ 官方文件寫「`R_TYPE` 跟 `)` 之間要有空格」，實測結果是不用... :roll_eyes:
-+ `M_ARGS`：method 的參數，單純的字串處理
++ `M_ARGS`：method 的參數。
+	跟 `F_TYPE` 一樣可以加上 generic type，單純的字串處理
 + `F_TYPE`、`M_NAME` 前面可以加上符號表現 visibility，單純的字串處理
 
 	 visibility | 符號
 	------------|------
 	 public     | + 
-	 private    | - 
 	 protected  | # 
 	 package    | ~ 
+	 private    | - 
 
 + `F_NAME` / `M_NAME()`後面可以加 `$` 表示為 static
 + `M_NAME()` 後面可以加 `*` 表示為 abstract method
@@ -66,11 +68,12 @@ CLASS_A "CM_TEXT" A_TYPE LINK A_TYPE "CM_TEXT" CLASS_B : L_TEXT
 	+ 如果給沒定義過的 class 就會視同定義一個新的 class
 	（下接 generic type 哏）
 	+ `CLASS_A` / `CLASS_B` 可以相同
+	+ 畫成圖形時，`CLASS_A` 會在 `CLASS_B` 的上方
 + `A_TYPE`：端點類型（可以沒有）
 
 	 端點類型 | 符號
 	----------|----------
-     實心三角 | <| 或 |>
+     實心三角 | <\| 或 \|>
 	 實心菱形 | *
 	 空心菱形 | o
 	 箭頭     | < 或 >
